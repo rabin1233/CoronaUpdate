@@ -1,0 +1,89 @@
+
+<!-- <form>
+  <div class="input-field">
+    <select class="custom-select country" id="inputGroupSelect04">
+      <option selected>Choose country ...</option>
+      <% for (var i = 0; i < results.length; i++){%>
+      <div class="input-group-append">
+      <option id="countrySelected" data-toggle="modal" data-target=".bd-example-modal-lg"><%= results[i].countryName %>
+      </option>
+      </div>
+      <% } %>
+    </select>
+  </div>
+</form> -->
+
+<div class="tableFixHead">
+    <table>
+      <thead>
+        <tr class="table-row">
+            <th>Country</th>
+            <th>Total Cases</th>
+            <th>New Cases</th>
+            <th>Total Deaths</th>
+            <th>New Deaths</th>
+            <th>Recovered</th>
+            <th>Active Cases</th>
+            <th>Critical Cases</th>
+            <th>Test Done</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i < results.length; i++){%>
+        <tr class="table-row">
+            <td><spam><%= results[i].countryName %></spam></td>
+            <td><spam><%= results[i].countryCases %></spam></td>
+            <td><spam><%= results[i].countryNewCases == '' ? '0' :  results[i].countryNewCases  %></spam></td>
+            <td class="death"><spam><%= results[i].countryDeath %></spam></td>
+            <td><spam><%= results[i].countryNewDeath == '' ? '0' :  results[i].countryNewDeath  %></spam></td>
+            <td><spam><%= results[i].countryRecovered == '' ? '0' :  results[i].countryRecovered  %></spam></td>
+            <td><spam><%= results[i].countryActiveCases %></spam></td>
+            <td><spam><%= results[i].countryCriticalCases %></spam></td>
+            <td><spam><%= results[i].countryTestDone %></spam></td>
+        </tr>
+        <% } %>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="name">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script>
+        $(document).ready(function(){
+        $("select.country").change(function(){
+            var selectedCountry = $(this).children("option:selected").val();
+            $('.modal').modal({
+              dismissible: false,
+              opacity: 8,
+              inDuration: 300,
+              outDuration: 200,
+              startingTop: '4%',
+              endingTop: "10%"
+            });
+            var p = $('<p>');
+              p.text(selectedCountry);
+            $(".name").append(p);
+
+        });
+    });
+  </script> -->
+
+

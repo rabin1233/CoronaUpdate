@@ -1,1 +1,1 @@
-# CoronaUpdate
+# corona-stat

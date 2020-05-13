@@ -1,0 +1,91 @@
+<div class="container my-container">
+        <% for (var i = 0; i < results.length; i++){%>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="main-box total-cases">
+                        <h2>Total Cases</h2>
+                        <h3><%= results[i].totalCases%></h3>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="main-box total-death">
+                        <h2>Deaths</h2>
+                        <h3><%= results[i].totalDeaths%></h3>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="main-box total-recovered">
+                        <h2>Recovered</h2>
+                        <h3><%= results[i].totalRecovered%></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="main-box-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>Active Cases</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h2><%= results[i].activeCases%></h2>
+                                <p>Currently Infected Patient</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="secondary-box-i">
+                                    <h2><%= results[i].mildCondition%> </h2><p>(<%= results[i].mildConditionPer%> %)</p>
+                                    <p>in Mild Condition</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="secondary-box-ii">
+                                    <h2><%= results[i].criticalCondition%> </h2><p>(<%= results[i].criticalConditionPer%> %)</p>
+                                    <p>Serious or critical</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="main-box-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>Closed Cases</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h2><%= results[i].closedCases%></h2>
+                                <p>Cases which has an outcome</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="secondary-box-iii">
+                                    <h2><%= results[i].totalRecovered%> </h2><p>(<%= results[i].recoveredCasesPer%> %)</p>
+                                    <p>Recovered/ Discharged</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="secondary-box-iv">
+                                    <h2><%= results[i].totalDeaths%> </h2><p>(<%= results[i].deathPer%> %)</p>
+                                    <p>Deaths</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        <% } %>
+
+</div>

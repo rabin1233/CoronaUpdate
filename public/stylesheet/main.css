@@ -1,0 +1,25 @@
+@import './partials/header.css';
+@import './partials/main-index.css';
+@import './partials/symptoms.css';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.my-container {
+    margin-top: 5vh;
+    margin-bottom: 8vh;
+}
+
+
+.tableFixHead          { overflow-y: auto; height: 100vh; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+/* Just common table stuff. Really. */
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; }
+th     { background:#eee; }
